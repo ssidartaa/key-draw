@@ -17,14 +17,8 @@ const RootLayout = ({
   children: ReactNode;
 }>) => {
   return (
-    <html
-      lang="pt-BR"
-      className="--vsc-domain"
-      suppressHydrationWarning
-      suppressContentEditableWarning
-      data-lt-installed
-    >
-      <body>
+    <html lang="pt-BR" className="--vsc-domain" suppressHydrationWarning>
+      <body suppressHydrationWarning>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <WordProvider>{children}</WordProvider>
         </ThemeProvider>

@@ -13,9 +13,13 @@ export interface IProps {
 }
 
 export interface IWordContext {
+  handleModal: (active: boolean, word?: IWord) => void;
   handleAddItemOnWordsList: (word: IWord) => void;
-  handleModal: (active: boolean) => void;
+  handleWining: (word: IWord) => void;
+  handleRemoveWord: (id: string) => void;
 
-  wordsList: IWord[] | null;
   modal: boolean;
+  modalWord: IWord | null;
+  wordsList: IWord[];
+  winingWord: IWord | null;
 }
